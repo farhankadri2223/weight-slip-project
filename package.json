@@ -1,0 +1,19 @@
+{
+  "name": "weight-slip-project",
+  "version": "1.0.0",
+  "description": "Weight Slip Generator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "multer": "^2.2.0",
+    "pdfkit": "^0.19.1",
+    "xlsx": "^0.18.5"
+  }
+}

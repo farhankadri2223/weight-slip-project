@@ -1,0 +1,9 @@
+node_modules/
+uploads/
+output/
+.env
+.webjs_auth/
+.webjs_cache/
+*.pdf
+*.xlsx
+*.xls

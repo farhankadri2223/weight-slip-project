@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Weight Slip Generator</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Weight Slip Generator</h1>
+
+    <p>Upload the Excel file to generate weight slips.</p>
+
+    <form
+        action="/upload"
+        method="POST"
+        enctype="multipart/form-data"
+    >
+
+        <input
+            type="file"
+            name="excel"
+            accept=".xlsx,.xls"
+            required
+        >
+
+        <button type="submit">
+            UPLOAD & GENERATE PDF
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
