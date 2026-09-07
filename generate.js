@@ -285,14 +285,19 @@ rows.forEach((row, index) => {
     ]);
 
     const netValue = Number(getValue(row, [
-  "NET WT",
-  "NET WT,",
-  "NET",
-  "Net WT",
-  "Net"
+    "NET WT",
+    "NET WT,",
+    "NET",
+    "Net WT",
+    "Net"
 ])) || 0;
 
-const net = Math.round(netValue);
+// Round floating-point value and limit NET WT to 5 digits
+let net = Math.round(netValue);
+
+if (net > 99999) {
+    net = 99999;
+}
 
     const date = formatDate(
         getValue(row, [
