@@ -276,13 +276,15 @@ rows.forEach((row, index) => {
         "Gross"
     ]);
 
-    const tare = getValue(row, [
-        "TARE WT",
-        "TARE WT.",
-        "TARE",
-        "Tare WT",
-        "Tare"
-    ]);
+    const tareValue = Number(getValue(row, [
+    "TARE WT",
+    "TARE WT.",
+    "TARE",
+    "Tare WT",
+    "Tare"
+])) || 0;
+
+const tare = Math.round(tareValue);
 
     const netValue = Number(getValue(row, [
     "NET WT",
