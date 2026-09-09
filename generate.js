@@ -268,13 +268,15 @@ rows.forEach((row, index) => {
         "Item"
     ]);
 
-    const gross = getValue(row, [
-        "GROSS WT",
-        "GROSS WT.",
-        "GROSS",
-        "Gross WT",
-        "Gross"
-    ]);
+    const grossValue = Number(getValue(row, [
+    "GROSS WT",
+    "GROSS WT.",
+    "GROSS",
+    "Gross WT",
+    "Gross"
+])) || 0;
+
+const gross = Math.round(grossValue);
 
     const tareValue = Number(getValue(row, [
     "TARE WT",
